@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OKR Tracker Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .status {
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            background: white;
+            border-left: 4px solid #ddd;
+        }
+        .success { border-left-color: #10b981; }
+        .error { border-left-color: #ef4444; }
+        .info { border-left-color: #3b82f6; }
+        h1 { color: #1f2937; }
+        pre {
+            background: #1f2937;
+            color: #10b981;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>🧪 OKR Tracker Diagnostics</h1>
+    
+    <div class="status info">
+        <strong>Step 1:</strong> Checking if server is running...
+        <div id="server-status">⏳ Testing...</div>
+    </div>
+    
+    <div class="status info">
+        <strong>Step 2:</strong> Checking if WASM file is accessible...
+        <div id="wasm-status">⏳ Testing...</div>
+    </div>
+    
+    <div class="status info">
+        <strong>Step 3:</strong> Browser Console Logs
+        <pre id="console-logs">Waiting for logs...</pre>
+    </div>
+    
+    <div class="status info">
+        <strong>Next Steps:</strong>
+        <ul>
+            <li><a href="/" style="color: #3b82f6;">Go to Main App</a></li>
+            <li>Open Browser DevTools (F12) and check the Console tab</li>
+            <li>Look for messages starting with 🔧, 📦, ✅, or ❌</li>
+        </ul>
+    </div>
+    
+    <script>
+        // Override console.log to capture logs
+        const logs = [];
+        const originalLog = console.log;
+        console.log = function(...args) {
+            logs.push(args.join(' '));
+            document.getElementById('console-logs').textContent = logs.join('\n');
+            originalLog.apply(console, args);
+        };
+        
+        console.log('🎬 Test page loaded');
+        console.log('📍 Location:', window.location.href);
+        console.log('🌐 User Agent:', navigator.userAgent);
+        
+        // Test 1: Server
+        document.getElementById('server-status').innerHTML = '✅ Server is running!';
+        
+        // Test 2: WASM file
+        fetch('/sql-wasm.wasm')
+            .then(response => {
+                if (response.ok) {
+                    return response.arrayBuffer();
+                } else {
+                    throw new Error('WASM file not found: ' + response.status);
+                }
+            })
+            .then(buffer => {
+                const size = (buffer.byteLength / 1024).toFixed(2);
+                document.getElementById('wasm-status').innerHTML = 
+                    `✅ WASM file accessible (${size} KB)`;
+                console.log('✅ WASM file loaded successfully:', size, 'KB');
+            })
+            .catch(error => {
+                document.getElementById('wasm-status').innerHTML = 
+                    '❌ WASM file NOT accessible: ' + error.message;
+                console.error('❌ WASM file error:', error);
+            });
+        
+        // Test 3: Try loading sql.js
+        console.log('📦 Attempting to load sql.js...');
+        import('https://cdn.jsdelivr.net/npm/sql.js@1.10.0/dist/sql-wasm.js')
+            .then(() => {
+                console.log('✅ sql.js module can be loaded');
+            })
+            .catch(error => {
+                console.error('❌ sql.js module error:', error);
+            });
+    </script>
+</body>
+</html>
+

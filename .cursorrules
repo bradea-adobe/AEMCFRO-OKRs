@@ -1,0 +1,177 @@
+# ============================================================
+# .cursorrules — GARCEA PROJECT STANDARDS
+# ============================================================
+
+# ============================================================
+# CORE PHILOSOPHY & REQUIREMENTS
+# ============================================================
+
+core_philosophy:
+  - Always start from REQUIREMENTS.md. It is the single source of truth.
+  - If a task, feature, or question is not described in REQUIREMENTS.md:
+      - Do not implement it.
+      - Ask for clarification instead.
+  - Reference requirement IDs (FR-xxx, NFR-xxx, OOS-xxx, Q-xxx) in plans, code, and tests.
+  - Keep code readable, modular, and minimal — prioritize clarity over cleverness.
+
+implementation_plan:
+  - Always generate or update IMPLEMENTATION_PLAN.md using python3 tools/gen_plan.py before coding.
+  - Each plan must:
+      - Map each FR/NFR ID to implementation steps and tests.
+      - Include Open Questions for unclear requirements.
+  - Store additional plans as plans/PLAN-<feature>.md when needed.
+  - Do not code until all open questions are resolved.
+
+requirements_validation:
+  - REQUIREMENTS.md defines all accepted work.
+  - Before merging:
+      - Run python3 tools/requirements_guard.py to confirm alignment.
+  - CI must fail if:
+      - REQUIREMENTS.md is missing.
+      - IMPLEMENTATION_PLAN.md is missing.
+      - Plan includes unknown FR/NFR IDs.
+      - Code references undeclared features.
+
+# ============================================================
+# FILE ORGANIZATION
+# ============================================================
+
+file_organization:
+  markdown_documentation:
+    - At the end of any coding session or activity where you create markdown (.md) files:
+        1. Move all newly created markdown files to the `Summaries/` directory
+        2. Use descriptive names with timestamps if appropriate (e.g., `YYYY-MM-DD_description.md`)
+        3. Exclude README.md and other critical root-level documentation files
+        4. Clean up any temporary markdown files from the project root
+    - Examples:
+        - `IMPLEMENTATION_SUMMARY.md` → `Summaries/IMPLEMENTATION_SUMMARY.md`
+        - Session notes, summaries, and documentation → `Summaries/`
+  
+  script_organization:
+    - Keep utility scripts (.sh, .py) in the `tools/` directory
+    - Maintain core application code in `src/py/`
+  
+  best_practices:
+    - Always organize files at the end of a session
+    - Keep the project root clean and minimal
+    - Preserve existing folder structure for application code
+
+# ============================================================
+# PYTHON RULES
+# ============================================================
+
+python_rules:
+  version: "3.11+"
+  package_manager: pip3
+  dependencies: requirements.txt
+  tools:
+    - black
+    - ruff
+    - mypy
+    - pytest
+  style:
+    - Use type hints everywhere.
+    - Use dataclasses for data models.
+    - Prefer pure functions and small modules.
+    - Catch and re-raise exceptions with context.
+    - No dynamic code execution or unsafe eval.
+  commands:
+    - python3 -m venv .venv && source .venv/bin/activate
+    - pip3 install --upgrade pip
+    - pip3 install -r requirements.txt
+    - pytest -q
+    - ruff check . --fix
+    - black .
+
+# ============================================================
+# NODE.JS RULES
+# ============================================================
+
+node_rules:
+  version: "20+"
+  package_manager: npm
+  dependencies: package.json
+  tools:
+    - eslint
+    - prettier
+    - vitest
+  style:
+    - Use ESM ("type": "module").
+    - Use named exports only.
+    - Validate inputs and handle async errors safely.
+    - Never use eval or dynamic Function constructors.
+  commands:
+    - npm install
+    - npm run lint
+    - npm run format
+    - npm test
+
+# ============================================================
+# MODULE DOCUMENTATION
+# ============================================================
+
+module_readmes:
+  - Every module under src/py/** or src/js/** must have a README.md with:
+      - Design
+      - Features
+      - Usage
+  - Generate and update automatically using python3 tools/gen_readmes.py.
+  - Preserve manual notes outside <!-- AUTO:BEGIN --> and <!-- AUTO:END -->.
+
+# ============================================================
+# SECURITY
+# ============================================================
+
+security:
+  - Never log secrets or personal data.
+  - Validate all external inputs.
+  - Use parameterized queries for databases.
+  - Avoid blocking operations in async code.
+  - No unsafe deserialization or arbitrary code execution.
+
+# ============================================================
+# TESTING
+# ============================================================
+
+testing:
+  - Write tests before implementing.
+  - Each FR must have at least one happy-path and one edge-case test.
+  - Aim for >=90% coverage.
+  - Use descriptive test names (test_function_behavior).
+
+# ============================================================
+# REVIEW CHECKLIST
+# ============================================================
+
+review_checklist:
+  - Mapped FR/NFR IDs in IMPLEMENTATION_PLAN.md.
+  - REQUIREMENTS.md unchanged unless expanding scope.
+  - Per-module READMEs updated.
+  - Tests updated and passing.
+  - No out-of-scope code.
+  - python3 tools/requirements_guard.py passes.
+
+# ============================================================
+# WORKFLOW
+# ============================================================
+
+workflow:
+  - Step 1: Update REQUIREMENTS.md (add FR/NFR IDs).
+  - Step 2: Run python3 tools/gen_plan.py.
+  - Step 3: Run python3 tools/gen_readmes.py.
+  - Step 4: Review IMPLEMENTATION_PLAN.md and clarify open questions.
+  - Step 5: Implement strictly per plan.
+  - Step 6: Run python3 tools/requirements_guard.py.
+  - Step 7: Commit with conventional commits (feat:, fix:, docs:).
+
+# ============================================================
+# VIBE PRINCIPLES
+# ============================================================
+
+vibe_principles:
+  - Keep the codebase calm, intentional, and minimal.
+  - Readability > cleverness.
+  - Clear naming and concise documentation.
+  - Fail fast, handle gracefully.
+  - Each module self-contained, documented, and testable.
+  - The Summary at the end of coding task or commands needs to be very short!
