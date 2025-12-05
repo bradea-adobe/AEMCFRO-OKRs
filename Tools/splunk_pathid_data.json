@@ -1,0 +1,65 @@
+{
+  "path_statistics": [
+    {
+      "path_map_id": "contentai__contentAI/gensearch/stream__post",
+      "requests": "229001"
+    },
+    {
+      "path_map_id": "contentai__contentAI/configurations__get",
+      "requests": "72659"
+    },
+    {
+      "path_map_id": "contentai__contentAI/search__post",
+      "requests": "7589"
+    },
+    {
+      "path_map_id": "contentai__contentAI/gensearch__post",
+      "requests": "5810"
+    },
+    {
+      "path_map_id": "contentai__contentAI/configurations/{}__get",
+      "requests": "399"
+    },
+    {
+      "path_map_id": "contentai__contentAI/configurations__post",
+      "requests": "388"
+    },
+    {
+      "path_map_id": "contentai__contentAI/configurations/{}__patch",
+      "requests": "112"
+    },
+    {
+      "path_map_id": "contentai__contentAI/configurations/{}/qmas/{}/feedback__post",
+      "requests": "80"
+    },
+    {
+      "path_map_id": "contentai__contentAI/configurations/{}__put",
+      "requests": "59"
+    },
+    {
+      "path_map_id": "contentai__contentAI/indexes__get",
+      "requests": "48"
+    },
+    {
+      "path_map_id": "",
+      "requests": "43"
+    },
+    {
+      "path_map_id": "contentai__contentAI/indexes/{}__get",
+      "requests": "14"
+    },
+    {
+      "path_map_id": "true",
+      "requests": "8"
+    },
+    {
+      "path_map_id": "contentai__contentAI/configurations/{}/qmas/{}/feedback__put",
+      "requests": "1"
+    }
+  ],
+  "total_requests": 316211,
+  "unique_paths": 14,
+  "extracted_at": "2025-12-04T19:59:24",
+  "time_range": "Last 30 days",
+  "query": "index=\"dx_aem_edge_prod\" sourcetype=\"apirouter\" host=\"*\" \n        (api=\"contentAI\" AND api!=\"unknown\" AND api!=\"\") \n        path=\"/adobe/*\" AND aem_tenant=\"*\" \n        | stats count as requests by path_map_id \n        | sort - requests \n        | head 100"
+}

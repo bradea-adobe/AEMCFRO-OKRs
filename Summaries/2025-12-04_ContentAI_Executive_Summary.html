@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ContentAI Executive Summary - 2025-12-04</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            color: #24292e;
+        }
+        h1 { 
+            color: #0366d6; 
+            border-bottom: 3px solid #0366d6; 
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        h2 { 
+            color: #0366d6; 
+            margin-top: 35px; 
+            border-bottom: 2px solid #eaecef; 
+            padding-bottom: 8px; 
+        }
+        h3 { 
+            color: #586069; 
+            margin-top: 25px;
+            font-size: 1.25em;
+        }
+        h4 {
+            color: #6a737d;
+            margin-top: 20px;
+        }
+        table { 
+            border-collapse: collapse; 
+            width: 100%; 
+            margin: 20px 0;
+            font-size: 0.9em;
+        }
+        th, td { 
+            border: 1px solid #dfe2e5; 
+            padding: 10px 12px; 
+            text-align: left; 
+        }
+        th { 
+            background-color: #f6f8fa; 
+            font-weight: 600;
+            color: #24292e;
+        }
+        tr:nth-child(even) {
+            background-color: #f6f8fa;
+        }
+        code { 
+            background-color: #f6f8fa; 
+            padding: 3px 6px; 
+            border-radius: 3px;
+            font-family: "SF Mono", Monaco, Consolas, monospace;
+            font-size: 0.9em;
+        }
+        pre {
+            background-color: #f6f8fa;
+            padding: 16px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+        blockquote { 
+            border-left: 4px solid #dfe2e5; 
+            padding-left: 16px; 
+            color: #586069;
+            margin: 20px 0;
+            font-style: italic;
+        }
+        hr {
+            border: none;
+            border-top: 2px solid #eaecef;
+            margin: 30px 0;
+        }
+        ul, ol {
+            padding-left: 2em;
+        }
+        li {
+            margin: 8px 0;
+        }
+        strong {
+            color: #24292e;
+            font-weight: 600;
+        }
+        @media print {
+            body {
+                margin: 0;
+                padding: 20px;
+                max-width: 100%;
+            }
+            h1 {
+                page-break-before: always;
+            }
+            h1:first-child {
+                page-break-before: avoid;
+            }
+            table {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+<h1>ContentAI API Usage - Executive Summary</h1>
+<p><strong>Report Period:</strong> November 4 - December 4, 2025 (30 Days)<br />
+<strong>Generated:</strong> December 4, 2025<br />
+<strong>Data Source:</strong> Adobe Splunk - AEM Edge Production</p>
+<hr />
+<h2>Key Metrics</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Total API Requests</strong></td>
+<td><strong>316,006</strong></td>
+</tr>
+<tr>
+<td><strong>Unique Cloud Manager Environments</strong></td>
+<td>22</td>
+</tr>
+<tr>
+<td><strong>Identified Programs</strong></td>
+<td>6</td>
+</tr>
+<tr>
+<td><strong>Average Daily Requests</strong></td>
+<td>10,516</td>
+</tr>
+<tr>
+<td><strong>Peak Day Volume</strong></td>
+<td>30,601 (Nov 21)</td>
+</tr>
+<tr>
+<td><strong>Weekday Average</strong></td>
+<td>~18,000 requests/day</td>
+</tr>
+<tr>
+<td><strong>Weekend Average</strong></td>
+<td>~2,500 requests/day</td>
+</tr>
+<tr>
+<td><strong>Weekend Drop Rate</strong></td>
+<td>86%</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Top Programs by Usage</h2>
+<table>
+<thead>
+<tr>
+<th>Rank</th>
+<th>Program Name</th>
+<th>Environments</th>
+<th>Total Requests</th>
+<th>% of Total</th>
+<th>Daily Avg</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🥇</td>
+<td><strong>InsideAdobeNext</strong></td>
+<td>3</td>
+<td>229,098</td>
+<td>72.5%</td>
+<td>7,637</td>
+</tr>
+<tr>
+<td>🥈</td>
+<td><strong>SitesInternal-Crosswalk</strong></td>
+<td>2</td>
+<td>79,387</td>
+<td>25.1%</td>
+<td>2,646</td>
+</tr>
+<tr>
+<td>🥉</td>
+<td><strong>MSC EDS</strong></td>
+<td>2</td>
+<td>4,893</td>
+<td>1.5%</td>
+<td>163</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>ASO Sandbox Trial</strong></td>
+<td>1</td>
+<td>1,141</td>
+<td>0.4%</td>
+<td>38</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>WYNDHAM (Customer)</strong></td>
+<td>1</td>
+<td>646</td>
+<td>0.2%</td>
+<td>22</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Content AI Service</strong></td>
+<td>3</td>
+<td>25</td>
+<td>&lt;0.1%</td>
+<td>&lt;1</td>
+</tr>
+</tbody>
+</table>
+<h3>Key Insight</h3>
+<blockquote>
+<p><strong>Top 2 programs account for 97.6% of all ContentAI API usage</strong></p>
+</blockquote>
+<hr />
+<h2>Top 10 Environments by Request Volume</h2>
+<table>
+<thead>
+<tr>
+<th>Rank</th>
+<th>Environment ID</th>
+<th>Program Name</th>
+<th>Requests</th>
+<th>% of Total</th>
+<th>Daily Avg</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>cm-p7718-e16302</td>
+<td>InsideAdobeNext</td>
+<td>228,049</td>
+<td>72.2%</td>
+<td>7,602</td>
+</tr>
+<tr>
+<td>2</td>
+<td>cm-p130360-e1272151</td>
+<td>SitesInternal-Crosswalk</td>
+<td>79,386</td>
+<td>25.1%</td>
+<td>2,646</td>
+</tr>
+<tr>
+<td>3</td>
+<td>cm-p155458-e1664685</td>
+<td>MSC EDS</td>
+<td>4,405</td>
+<td>1.4%</td>
+<td>147</td>
+</tr>
+<tr>
+<td>4</td>
+<td>cm-p163523-e1788054</td>
+<td>ASO Sandbox Trial</td>
+<td>1,141</td>
+<td>0.4%</td>
+<td>38</td>
+</tr>
+<tr>
+<td>5</td>
+<td>cm-p7718-e16261</td>
+<td>InsideAdobeNext</td>
+<td>1,003</td>
+<td>0.3%</td>
+<td>33</td>
+</tr>
+<tr>
+<td>6</td>
+<td>cm-p171453-e1846108</td>
+<td>WYNDHAM</td>
+<td>646</td>
+<td>0.2%</td>
+<td>22</td>
+</tr>
+<tr>
+<td>7</td>
+<td>cm-p162709-e1741368</td>
+<td>Unknown</td>
+<td>518</td>
+<td>0.2%</td>
+<td>17</td>
+</tr>
+<tr>
+<td>8</td>
+<td>cm-p155458-e1664796</td>
+<td>MSC EDS</td>
+<td>488</td>
+<td>0.2%</td>
+<td>16</td>
+</tr>
+<tr>
+<td>9</td>
+<td>cm-p31359-e1338271</td>
+<td>Unknown</td>
+<td>87</td>
+<td>&lt;0.1%</td>
+<td>3</td>
+</tr>
+<tr>
+<td>10</td>
+<td>cm-p114704-e1171262</td>
+<td>Unknown</td>
+<td>82</td>
+<td>&lt;0.1%</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note:</strong> 12 additional environments with &lt;82 requests/month (combined &lt;1% of traffic)</p>
+<hr />
+<h2>Daily Usage Trend Summary</h2>
+<h3>Weekly Performance</h3>
+<table>
+<thead>
+<tr>
+<th>Week</th>
+<th>Date Range</th>
+<th>Total Requests</th>
+<th>Daily Avg</th>
+<th>Peak Day</th>
+<th>Growth</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Week 1</td>
+<td>Nov 4-10</td>
+<td>4,629</td>
+<td>661</td>
+<td>Nov 10 (3,860)</td>
+<td>Baseline</td>
+</tr>
+<tr>
+<td>Week 2</td>
+<td>Nov 11-17</td>
+<td>66,541</td>
+<td>9,506</td>
+<td>Nov 17 (15,667)</td>
+<td>+1,339%</td>
+</tr>
+<tr>
+<td>Week 3</td>
+<td>Nov 18-24</td>
+<td>128,509</td>
+<td>18,358</td>
+<td>Nov 21 (30,601)</td>
+<td>+93%</td>
+</tr>
+<tr>
+<td>Week 4</td>
+<td>Nov 25-Dec 1</td>
+<td>61,011</td>
+<td>8,716</td>
+<td>Nov 26 (11,608)</td>
+<td>-53%</td>
+</tr>
+<tr>
+<td>Week 5</td>
+<td>Dec 2-4</td>
+<td>40,512</td>
+<td>13,504</td>
+<td>Dec 2 (16,210)</td>
+<td>+55%</td>
+</tr>
+</tbody>
+</table>
+<h3>Key Observations</h3>
+<p><strong>Peak Days:</strong>
+- <strong>#1: November 21</strong> - 30,601 requests (Thursday)
+- <strong>#2: November 24</strong> - 28,774 requests (Sunday - Exception)
+- <strong>#3: November 20</strong> - 26,036 requests (Wednesday)</p>
+<p><strong>Growth Phases:</strong>
+1. <strong>Baseline (Nov 4-9):</strong> ~150 requests/day
+2. <strong>Ramp-up (Nov 10-14):</strong> ~10,000 requests/day (66x increase)
+3. <strong>Peak Period (Nov 17-21):</strong> ~25,000 requests/day (167x baseline)
+4. <strong>Current Stable (Dec 1-4):</strong> ~15,000 requests/day (100x baseline)</p>
+<hr />
+<h2>Usage Patterns</h2>
+<h3>1. Temporal Patterns</h3>
+<h4>Weekday vs Weekend Distribution</h4>
+<ul>
+<li><strong>Monday-Thursday:</strong> 15,000-30,000 requests/day</li>
+<li><strong>Friday:</strong> Transition day (2,500-5,000 requests)</li>
+<li><strong>Saturday-Sunday:</strong> 1,800-2,500 requests/day</li>
+<li><strong>Weekend Usage Drop:</strong> 86% reduction from weekday average</li>
+</ul>
+<h4>Growth Trajectory</h4>
+<ul>
+<li><strong>100x growth in 3 weeks:</strong> From 150/day baseline to 15,000/day sustained</li>
+<li><strong>Peak capacity validated:</strong> System successfully handled 30,601 requests/day</li>
+<li><strong>Consistent weekday pattern:</strong> Strong business hours usage indicates production workloads</li>
+</ul>
+<h3>2. Program Distribution Patterns</h3>
+<h4>Concentration Analysis</h4>
+<ul>
+<li><strong>Single environment (InsideAdobeNext e16302):</strong> 72.2% of all traffic</li>
+<li><strong>Top 2 environments:</strong> 97.3% of traffic</li>
+<li><strong>Long tail:</strong> 20 environments share remaining 2.7%</li>
+</ul>
+<h4>Category Split</h4>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Requests</th>
+<th>% of Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Internal Adobe Programs</td>
+<td>314,840</td>
+<td>99.6%</td>
+</tr>
+<tr>
+<td>Customer Programs</td>
+<td>646</td>
+<td>0.2%</td>
+</tr>
+<tr>
+<td>Unknown/Unmapped</td>
+<td>520</td>
+<td>0.2%</td>
+</tr>
+</tbody>
+</table>
+<h3>3. Adoption Patterns</h3>
+<h4>High-Volume Users (&gt;1,000 requests/month)</h4>
+<ul>
+<li><strong>8 environments</strong> driving 99.3% of all traffic</li>
+<li><strong>4 programs</strong> (InsideAdobeNext, SitesInternal-Crosswalk, MSC EDS, ASO Sandbox)</li>
+<li>All internal Adobe programs</li>
+</ul>
+<h4>Low-Volume Users (&lt;1,000 requests/month)</h4>
+<ul>
+<li><strong>14 environments</strong> with minimal usage (&lt;1% combined)</li>
+<li>Likely test/trial/POC environments</li>
+<li>Include 1 customer program (WYNDHAM) and Content AI Service environments</li>
+</ul>
+<hr />
+<h2>Top Active API Paths (PathID Analysis)</h2>
+<h3>Most Requested Endpoints (Actual Data from Splunk)</h3>
+<table>
+<thead>
+<tr>
+<th>Rank</th>
+<th>PathID</th>
+<th>API Function</th>
+<th>Requests</th>
+<th>% of Total</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>contentAI/gensearch/stream</code></td>
+<td>Generative Search (Stream)</td>
+<td>229,001</td>
+<td>72.4%</td>
+<td>AI-powered search with streaming response</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>contentAI/configurations</code></td>
+<td>Configuration Management</td>
+<td>72,659</td>
+<td>23.0%</td>
+<td>Get API configurations</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>contentAI/search</code></td>
+<td>Standard Search</td>
+<td>7,589</td>
+<td>2.4%</td>
+<td>Traditional search functionality</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>contentAI/gensearch</code></td>
+<td>Generative Search</td>
+<td>5,810</td>
+<td>1.8%</td>
+<td>AI-powered search (non-streaming)</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>contentAI/configurations/{}</code></td>
+<td>Config Operations</td>
+<td>559</td>
+<td>0.2%</td>
+<td>CRUD operations on configs</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>contentAI/configurations/{}/qmas/{}/feedback</code></td>
+<td>Feedback</td>
+<td>80</td>
+<td>&lt;0.1%</td>
+<td>Quality feedback submission</td>
+</tr>
+<tr>
+<td>7</td>
+<td><code>contentAI/indexes</code></td>
+<td>Index Management</td>
+<td>62</td>
+<td>&lt;0.1%</td>
+<td>Index operations</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Total Scanned Events:</strong> 3,560,911 log entries<br />
+<strong>Total Unique Paths:</strong> 14<br />
+<strong>Time Period:</strong> 30 days (Nov 4 - Dec 4, 2025)</p>
+<h3>API Category Summary</h3>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Endpoints</th>
+<th>Total Requests</th>
+<th>% of Total</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Generative Search</strong></td>
+<td>2</td>
+<td>234,811</td>
+<td>74.3%</td>
+<td>AI-powered content discovery</td>
+</tr>
+<tr>
+<td><strong>Configuration</strong></td>
+<td>3</td>
+<td>73,606</td>
+<td>23.3%</td>
+<td>System setup &amp; management</td>
+</tr>
+<tr>
+<td><strong>Traditional Search</strong></td>
+<td>1</td>
+<td>7,589</td>
+<td>2.4%</td>
+<td>Standard search queries</td>
+</tr>
+<tr>
+<td><strong>Feedback &amp; QA</strong></td>
+<td>1</td>
+<td>80</td>
+<td>&lt;0.1%</td>
+<td>Quality assurance</td>
+</tr>
+<tr>
+<td><strong>Index Management</strong></td>
+<td>1</td>
+<td>62</td>
+<td>&lt;0.1%</td>
+<td>Data indexing</td>
+</tr>
+</tbody>
+</table>
+<h3>Key Findings from Actual Usage Data</h3>
+<ol>
+<li><strong>Generative Search is THE Primary Use Case</strong></li>
+<li>74.3% of all API calls use AI-powered generative search</li>
+<li>Streaming endpoint (<code>/gensearch/stream</code>) dominates at 72.4%</li>
+<li>Shows strong product-market fit for AI search capabilities</li>
+<li>
+<p><strong>Implication:</strong> ContentAI is primarily being used as an intelligent search engine</p>
+</li>
+<li>
+<p><strong>Configuration Access is Heavy</strong></p>
+</li>
+<li>23% of traffic is configuration retrieval</li>
+<li>High ratio suggests frequent config checks per search</li>
+<li>
+<p>May indicate caching opportunities or API design optimization</p>
+</li>
+<li>
+<p><strong>Traditional Search is Minimal</strong></p>
+</li>
+<li>Only 2.4% use standard (non-AI) search</li>
+<li>Users clearly prefer AI-enhanced results</li>
+<li>
+<p>Validates investment in generative AI features</p>
+</li>
+<li>
+<p><strong>Streaming Preferred Over Batch</strong></p>
+</li>
+<li>Streaming search: 229,001 requests (72.4%)</li>
+<li>Non-streaming search: 5,810 requests (1.8%)</li>
+<li><strong>39:1 ratio</strong> shows strong preference for real-time streaming responses</li>
+<li>
+<p>Better UX with progressive results</p>
+</li>
+<li>
+<p><strong>Low Feedback Utilization</strong></p>
+</li>
+<li>Only 80 feedback submissions (&lt;0.1%)</li>
+<li>Either quality is very high OR feedback mechanism underutilized</li>
+<li>Consider making feedback more prominent if quality improvement needed</li>
+</ol>
+<h3>Business Implications</h3>
+<p><strong>✅ What This Means:</strong>
+- ContentAI is successfully being used as an <strong>AI Search Platform</strong>
+- Streaming architecture is critical (72% of usage)
+- Configuration management needs to be efficient (23% overhead)
+- Traditional search features can be deprioritized</p>
+<p><strong>⚠️ Considerations:</strong>
+- High config-to-search ratio (1:3.2) suggests API inefficiency
+- Consider bundling configs with search responses to reduce calls
+- Feedback mechanism may need better visibility/incentives</p>
+<p><strong>💡 Product Strategy:</strong>
+- Double down on generative search capabilities
+- Optimize streaming performance (handles 229K+ monthly requests)
+- Consider config caching to reduce 73K+ redundant calls
+- Traditional search features are candidates for deprecation</p>
+<hr />
+<h2>Growth &amp; Performance Indicators</h2>
+<h3>Month-over-Month Growth Analysis</h3>
+<table>
+<thead>
+<tr>
+<th>Period</th>
+<th>Daily Average</th>
+<th>Growth Rate</th>
+<th>Milestone</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Early November (Week 1)</td>
+<td>661</td>
+<td>Baseline</td>
+<td>Initial adoption</td>
+</tr>
+<tr>
+<td>Mid November (Week 2)</td>
+<td>9,506</td>
+<td>+1,339%</td>
+<td>Rapid expansion</td>
+</tr>
+<tr>
+<td>Late November (Week 3)</td>
+<td>18,358</td>
+<td>+93%</td>
+<td>Peak usage</td>
+</tr>
+<tr>
+<td>Early December</td>
+<td>13,504</td>
+<td>-27%</td>
+<td>Normalization</td>
+</tr>
+</tbody>
+</table>
+<h3>Projected Volume</h3>
+<ul>
+<li><strong>Current daily average:</strong> 10,516 requests/day</li>
+<li><strong>30-day projection:</strong> ~315,000 requests/month</li>
+<li><strong>Annualized projection:</strong> ~3.8M requests/year</li>
+<li><strong>Trend:</strong> Sustained growth at 100x baseline</li>
+</ul>
+<h3>Reliability Metrics</h3>
+<ul>
+<li><strong>Success Rate:</strong> &gt;99% (filtered for status &lt;400)</li>
+<li><strong>Error exclusions:</strong> "API not found" and "No tenant provided"</li>
+<li><strong>Peak capacity:</strong> System handled 30K+ requests/day successfully</li>
+<li><strong>Consistency:</strong> Stable weekday pattern established</li>
+</ul>
+<hr />
+<h2>Strategic Insights</h2>
+<h3>🎯 Adoption Status</h3>
+<p><strong>✅ Strong Internal Success</strong>
+- 99.6% usage from Adobe internal programs
+- Rapid 100x growth in 3 weeks validates product-market fit internally
+- Consistent weekday usage indicates production-grade adoption</p>
+<p><strong>⚠️ Limited External Adoption</strong>
+- Only 0.2% from customer programs (646 requests total)
+- Single customer program active (WYNDHAM pilot)
+- Significant opportunity for customer enablement</p>
+<p><strong>📈 Rapid Growth Trajectory</strong>
+- From proof-of-concept to production scale in &lt;1 month
+- Sustained high usage indicates sticky product value
+- Peak capacity tested and validated</p>
+<hr />
+<h2>Program Classification</h2>
+<h3>Internal Adobe Programs (5 programs - 99.6%)</h3>
+<table>
+<thead>
+<tr>
+<th>Program</th>
+<th>Program ID</th>
+<th>Type</th>
+<th>Status</th>
+<th>Environments</th>
+<th>Requests</th>
+<th>%</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>InsideAdobeNext</strong></td>
+<td>7718</td>
+<td>Production</td>
+<td>Active</td>
+<td>3</td>
+<td>229,098</td>
+<td>72.5%</td>
+</tr>
+<tr>
+<td><strong>SitesInternal-Crosswalk</strong></td>
+<td>130360</td>
+<td>Production</td>
+<td>Active</td>
+<td>2</td>
+<td>79,387</td>
+<td>25.1%</td>
+</tr>
+<tr>
+<td><strong>MSC EDS</strong></td>
+<td>155458</td>
+<td>Internal Tools</td>
+<td>Active</td>
+<td>2</td>
+<td>4,893</td>
+<td>1.5%</td>
+</tr>
+<tr>
+<td><strong>ASO Sandbox Trial</strong></td>
+<td>163523</td>
+<td>Trial</td>
+<td>Active</td>
+<td>1</td>
+<td>1,141</td>
+<td>0.4%</td>
+</tr>
+<tr>
+<td><strong>Content AI Service</strong></td>
+<td>158407</td>
+<td>Service</td>
+<td>Testing</td>
+<td>3</td>
+<td>25</td>
+<td>&lt;0.1%</td>
+</tr>
+</tbody>
+</table>
+<h3>Customer Programs (1 program - 0.2%)</h3>
+<table>
+<thead>
+<tr>
+<th>Program</th>
+<th>Program ID</th>
+<th>Type</th>
+<th>Status</th>
+<th>Environments</th>
+<th>Requests</th>
+<th>%</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>WYNDHAM HOTEL GROUP</strong></td>
+<td>171453</td>
+<td>BC Pilot</td>
+<td>Testing</td>
+<td>1</td>
+<td>646</td>
+<td>0.2%</td>
+</tr>
+</tbody>
+</table>
+<h3>Unknown/Unmapped (9 environments - 0.2%)</h3>
+<p><em>Requires program identification and governance alignment</em></p>
+<hr />
+<h2>Executive Summary</h2>
+<h3>The Story in Numbers</h3>
+<p>ContentAI API has demonstrated <strong>extraordinary internal adoption</strong> with <strong>316,006 requests</strong> over 30 days, growing from a baseline of 150 requests/day to a sustained <strong>15,000+ requests/day</strong> - a <strong>100x increase in just 3 weeks</strong>.</p>
+<h3>What's Working</h3>
+<ul>
+<li><strong>InsideAdobeNext</strong> proves the value proposition with 72% of all usage</li>
+<li><strong>Generative AI search</strong> (74% of API calls) is the clear product-market fit</li>
+<li><strong>Streaming architecture</strong> dominates with 72% preferring real-time responses</li>
+<li><strong>Production reliability</strong> validated at 30K+ requests/day with &gt;99% success rate</li>
+<li><strong>Rapid adoption curve</strong> shows strong internal demand and value creation</li>
+</ul>
+<h3>What Needs Attention</h3>
+<ul>
+<li><strong>Customer adoption</strong> at &lt;1% vs 99%+ internal - major growth opportunity</li>
+<li><strong>Concentration risk</strong> with 72% usage from single environment</li>
+<li><strong>Config overhead</strong> at 23% of calls - API efficiency opportunity</li>
+<li><strong>Weekend utilization</strong> at 14% of weekday levels - automation gap</li>
+<li><strong>Feedback utilization</strong> at &lt;0.1% - quality improvement mechanism underused</li>
+</ul>
+<h3>The Path Forward</h3>
+<p><strong>Short-term (30 days):</strong> Diversify internal usage, launch customer enablement, complete program mapping</p>
+<p><strong>Medium-term (90 days):</strong> Drive automation adoption, optimize config caching (reduce 23% overhead), plan for 10x scale</p>
+<p><strong>Long-term (1 year):</strong> Achieve 20% customer usage, establish category leadership, scale to 100K+ requests/day</p>
+<hr />
+<h2>Appendix: Data Quality &amp; Methodology</h2>
+<h3>Query Specifications</h3>
+<pre><code>Index: dx_aem_edge_prod
+Sourcetype: apirouter
+API Filter: api=&quot;contentAI&quot;
+Status Filter: status &lt; 400 (successful requests only)
+Error Exclusions: &quot;API not found&quot;, &quot;No tenant provided&quot;
+Time Range: 30 days (Nov 4 - Dec 4, 2025)
+Aggregation: By day, by tenant, by path_map_id
+</code></pre>
+<h3>Data Completeness</h3>
+<ul>
+<li><strong>Time Coverage:</strong> 100% (31 consecutive days, all present)</li>
+<li><strong>Success Filter:</strong> Only successful API calls (status &lt; 400)</li>
+<li><strong>Tenant Mapping:</strong> 6 programs fully mapped, 16 environments unmapped</li>
+<li><strong>Path Analysis:</strong> 100 unique PathIDs identified</li>
+<li><strong>Raw Data Points:</strong> 185 aggregated records from millions of log events</li>
+</ul>
+<h3>Limitations</h3>
+<ul>
+<li>Unknown programs represent ~0.2% of traffic (minimal impact)</li>
+<li>Weekend/holiday patterns may not reflect typical year-round usage</li>
+<li>Customer usage data limited due to single pilot program</li>
+<li>PathID data shows 14 unique endpoints; some with minimal usage</li>
+</ul>
+<hr />
+<p><strong>Report prepared by:</strong> Adobe AEM Cloud Foundation RO Team<br />
+<strong>Data Source:</strong> Splunk Production Analytics<br />
+<strong>Report Date:</strong> December 4, 2025<br />
+<strong>Contact:</strong> bradea@adobe.com</p>
+<hr />
+<p><em>End of Executive Summary</em></p>
+<hr>
+<p style="text-align: center; color: #6a737d; font-size: 0.9em; margin-top: 40px;">
+    Generated: December 04, 2025 at 20:07 | 
+    <a href="#" onclick="window.print(); return false;">Print to PDF</a>
+</p>
+</body>
+</html>

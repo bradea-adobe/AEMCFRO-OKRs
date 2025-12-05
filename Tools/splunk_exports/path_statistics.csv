@@ -1,0 +1,15 @@
+Rank,PathID,Requests,Percentage
+1,contentai__contentAI/gensearch/stream__post,229001,72.42%
+2,contentai__contentAI/configurations__get,72659,22.98%
+3,contentai__contentAI/search__post,7589,2.40%
+4,contentai__contentAI/gensearch__post,5810,1.84%
+5,contentai__contentAI/configurations/{}__get,399,0.13%
+6,contentai__contentAI/configurations__post,388,0.12%
+7,contentai__contentAI/configurations/{}__patch,112,0.04%
+8,contentai__contentAI/configurations/{}/qmas/{}/feedback__post,80,0.03%
+9,contentai__contentAI/configurations/{}__put,59,0.02%
+10,contentai__contentAI/indexes__get,48,0.02%
+11,,43,0.01%
+12,contentai__contentAI/indexes/{}__get,14,0.00%
+13,true,8,0.00%
+14,contentai__contentAI/configurations/{}/qmas/{}/feedback__put,1,0.00%

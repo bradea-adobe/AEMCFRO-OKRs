@@ -1,0 +1,70 @@
+{
+  "tenant_mapping": {
+    "cm-p7718-e16302": "InsideAdobeNext",
+    "cm-p7718-e16261": "InsideAdobeNext",
+    "cm-p7718-e22224": "InsideAdobeNext",
+    "cm-p155458-e1664685": "MSC EDS",
+    "cm-p155458-e1664796": "MSC EDS",
+    "cm-p130360-e1272151": "SitesInternal-Crosswalk",
+    "cm-p130360-e1272244": "SitesInternal-Crosswalk",
+    "cm-p171453-e1846108": "WYNDHAM HOTEL GROUP LLC BC Pilot",
+    "cm-p163523-e1788054": "ASO Sandbox Trial",
+    "cm-p158407-e1689364": "Content AI Service Program",
+    "cm-p158407-e1710855": "Content AI Service Program",
+    "cm-p158407-e1696476": "Content AI Service Program",
+    "cm-p162709-e1741368": "Unknown Program",
+    "cm-p31359-e1338271": "Unknown Program",
+    "cm-p47754-e1700224": "Unknown Program",
+    "cm-p47754-e237307": "Unknown Program",
+    "cm-p114704-e1171262": "Unknown Program",
+    "cm-p114704-e1122666": "Unknown Program",
+    "cm-p115966-e1137377": "Unknown Program",
+    "cm-p52402-e1704223": "Unknown Program",
+    "cm-p161503-e1722530": "Unknown Program",
+    "cm-p165854-e1765445": "Unknown Program"
+  },
+  "program_metadata": {
+    "InsideAdobeNext": {
+      "program_id": "7718",
+      "category": "Internal Adobe",
+      "description": "Internal Adobe AEM Skyline program",
+      "environments": ["cm-p7718-e16302", "cm-p7718-e16261", "cm-p7718-e22224"]
+    },
+    "MSC EDS": {
+      "program_id": "155458",
+      "category": "Internal Adobe",
+      "description": "Internal CM team EDS program",
+      "environments": ["cm-p155458-e1664685", "cm-p155458-e1664796"]
+    },
+    "SitesInternal-Crosswalk": {
+      "program_id": "130360",
+      "category": "Internal Adobe",
+      "description": "Internal Sites program",
+      "environments": ["cm-p130360-e1272151", "cm-p130360-e1272244"]
+    },
+    "WYNDHAM HOTEL GROUP LLC BC Pilot": {
+      "program_id": "171453",
+      "category": "Customer",
+      "description": "Customer program (Wyndham)",
+      "environments": ["cm-p171453-e1846108"]
+    },
+    "ASO Sandbox Trial": {
+      "program_id": "163523",
+      "category": "Trial",
+      "description": "AEM Sites sandbox trial",
+      "environments": ["cm-p163523-e1788054"]
+    },
+    "Content AI Service Program": {
+      "program_id": "158407",
+      "category": "Internal Adobe",
+      "description": "Internal content AI program",
+      "environments": ["cm-p158407-e1689364", "cm-p158407-e1710855", "cm-p158407-e1696476"]
+    }
+  },
+  "metadata": {
+    "last_updated": "2024-12-04",
+    "version": "1.1",
+    "description": "Mapping of Splunk tenant IDs (Cloud Manager environment IDs) to program names",
+    "note": "Tenant IDs follow format cm-p{programId}-e{environmentId}"
+  }
+}
